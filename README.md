@@ -1,5 +1,9 @@
 ## Debian and Openbox Restoration Script(s)
 
+![Openbox desktop on Debian](https://madcarters.com/images/alanordic.jpg)
+
+
+
 Handy Debian and Openbox desktop wickedness you can quickly set up and use after a net install.
 
 Heh, 'DORiS'.
@@ -26,6 +30,8 @@ Usage
 It's boring because it's Debian and Openbox and it just works. Lots of keybinds, aliases, that kind of thing, few handy scripts and whatnot. 
 Pretty good way to go if you enjoy the Linux. Out of your way, light, fast, !Ahem! boring - no whiz-bang at all, like, no ricing, or, whatever.
 I don't even know what that is. It's X11, too, so, you know, it works.
+
+I've got a post-install dome.txt file around here somewhwere that I will add to the repo.
 
 Heh.
 
