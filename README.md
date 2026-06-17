@@ -6,7 +6,7 @@
 
 Handy Debian and Openbox desktop wickedness you can quickly set up and use after a net install.
 
-Heh, 'DORiS'.
+Heh, 'DORiS', because acronyms are fun. Right?
 
 I borrowed from all over the place over the years and attribution has more or less been maintained.
 
@@ -29,10 +29,8 @@ Usage
 
 It's boring because it's Debian and Openbox and it just works. Lots of keybinds, aliases, that kind of thing, few handy scripts and whatnot. 
 Pretty good way to go if you enjoy the Linux. Out of your way, light, fast, !Ahem! boring - no whiz-bang at all, like, no ricing, or, whatever.
-I don't even know what that is. It's X11, too, so, you know, it works.
+I don't even know what that is. It's X11, too, so, you know, it works. Heh.
 
-I've got a post-install dome.txt file around here somewhwere that I will add to the repo.
-
-Heh.
+I don't use wifi at home and that is reflected here. If wifi is needed at any point it's simple enough just to install connman; works a charm.
 
 see ya
