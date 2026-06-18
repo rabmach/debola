@@ -2,8 +2,10 @@
 
 ![Openbox desktop on Debian](https://madcarters.com/images/alanordic.jpg)
 
-Handy Openbox desktop wickedness on a Debian system you can run with **just like that** after a net install and never have to worry about this sort of thing again. This installs a minimal desktop and you will probably install more stuff following, but, this is a good place to start. Best for a fresh install, but, scripts can be run any time and with subsequent users. This desktop setup is a pretty good way to go if you enjoy the Linux. It has been reliable anf functional for me for a long time. It's out of your way, light, fast, boring - no whiz-bang at all, like, no ricing, or, whatever.
-I don't even know what that is. It's X11, too, so, you know, it's, ahhh, mature.
+Handy Openbox desktop wickedness on a Debian system you can run with **just like that** after a net install and never have to worry about this sort of thing again. This installs a minimal desktop and you will probably install more stuff following, but, this is a good place to start. Best for a fresh install, but, scripts can be run any time and with subsequent users.
+
+This desktop setup is a pretty good way to go if you enjoy the Linux. It has been reliable and functional for me for a long time. It's out of the way, light, fast, boring - no whiz-bang at all, like, no ricing, or, whatever.
+I don't even know what that is. It's pretty, though, and X11, too, so, you know, it's, ahhh, mature.
 
 Basically this is just an easy restore solution for me on a new or formatted drive that works so well I put it up here; have at it. I run it when I reinstall and keep ~/me, too. Just so handy.
 
