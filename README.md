@@ -85,7 +85,6 @@ and there you go. Have fun.
 <dt><kbd>Win</kbd>+<kbd>F</kbd> - x-file-manager</dt>
 <dt><kbd>Win</kbd>+<kbd>E</kbd> - x-text-editor</dt>
 <dt><kbd>Win</kbd>+<kbd>T</kbd> - x-terminal-emulator</dt>
-<dt><kbd>Win</kbd>+<kbd>G</kbd> - Nexuiz - I mean, unless you're too chicken</dt>
 <dt><kbd>Win</kbd>+<kbd>M</kbd> - Claws-Mail</dt>
 <dt><kbd>Win</kbd>+<kbd>H</kbd> - htop</dt>
 <dt><kbd>Win</kbd>+<kbd>I</kbd> - yad icon browser</dt>
