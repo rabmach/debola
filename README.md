@@ -22,7 +22,7 @@ at the bottom of restored ~/.profile in order to log in automatically after you 
 
 ## Get There from Here, Simple and quick
 
-Install Debian from the [net installer](https://www.debian.org/CD/netinst/), choose advanced, expert install and opt to give a password to the **root user** and choose only **standard system utilities** at the software installation part.
+Install Debian from the [net installer](https://www.debian.org/CD/netinst/), choose advanced, expert install and opt to give a password to the **root user** and choose only **standard system utilities** at the software installation part, un-check the rest.
 
 Reboot
 
