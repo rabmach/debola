@@ -89,6 +89,7 @@ and there you go. Have fun.
 <dt><kbd>Win</kbd>+<kbd>R</kbd> - ssr, recording</dt>
 <dt><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd> - flick picker</dt> </dl>
 
-See ya
+later
+
 
 <img src="https://madcarters.com/images/logout.jpg">
