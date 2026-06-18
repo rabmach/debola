@@ -28,4 +28,4 @@ fi
 if [ -d "$HOME/.local/share/scripts" ] ; then
     PATH="$HOME/.local/share/scripts:$PATH"
 fi
-[ ! "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ] && PROMPT_COMMAND="startx && exit;" #DEBIAN-OPENBOX-loginfetch
+#[ ! "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ] && PROMPT_COMMAND="startx && exit;" #DEBIAN-OPENBOX-loginfetch
