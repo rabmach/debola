@@ -40,7 +40,7 @@ Following that, log out and log in as your regular user and clone the repo
 
 Then, simply cd into debola, chmod +x restore.sh, and then run it: ./restore.sh
 
-and there you go; easiest 20 minutes you will spend today. Have fun.
+and there you go; easiest 20 minutes you will spend today with the biggest return, by miles. Have fun.
 
 ## Usage
 
