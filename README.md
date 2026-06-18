@@ -15,7 +15,7 @@ Thanks to all the maintainers and devs and clever folk out there because computi
 
 1. Defaults to an external monitor, *see ~/.config/openbox/autostart*
 2. boots to a tty, there is no login/display manager
-3. You may want to install connman or network-manager if you need wifi
+3. You may want to install **connman** or **network-manager** if you need wifi
 4. you may uncomment:   
 ```#[ ! "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ] && PROMPT_COMMAND="startx && exit;"```  
 at the bottom of restored ~/.profile in order to log in automatically after you input your credentials.
