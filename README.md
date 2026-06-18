@@ -14,7 +14,7 @@ Thanks to all the maintainers and devs and clever folk out there because computi
 ## What to be aware of out the gate
 
 1. Defaults to an external monitor, *see ~/.config/openbox/autostart*
-2. boots to a tty, there is no login/display manager
+2. boots to a tty, there is no login/display manager. I install [loginfetch](https://github.com/leomarcov/debian-openbox/tree/master/30_script_loginfetch) modified to negate physlock
 3. You may want to install **connman** or **network-manager** if you need wifi
 4. you may uncomment:   
 ```#[ ! "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ] && PROMPT_COMMAND="startx && exit;"```  
