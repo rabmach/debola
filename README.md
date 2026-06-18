@@ -82,9 +82,9 @@ and there you go. Have fun.
 	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Down arrow</kbd> - pause</dd>
 	<dd><kbd>win</kbd>+<kbd>Delete</kbd> - quit pianobar</dd>
 <dt><kbd>Win</kbd>+<kbd>B</kbd> - Firefox</dt>
-<dt><kbd>Win</kbd>+<kbd>F</kbd> - x-file-manager</dt>
-<dt><kbd>Win</kbd>+<kbd>E</kbd> - x-text-editor</dt>
-<dt><kbd>Win</kbd>+<kbd>T</kbd> - x-terminal-emulator</dt>
+<dt><kbd>Win</kbd>+<kbd>F</kbd> - x-file-manager (Thunar)</dt>
+<dt><kbd>Win</kbd>+<kbd>E</kbd> - x-text-editor (Sublime-Text)</dt>
+<dt><kbd>Win</kbd>+<kbd>T</kbd> - x-terminal-emulator (Alacritty)</dt>
 <dt><kbd>Win</kbd>+<kbd>M</kbd> - Claws-Mail</dt>
 <dt><kbd>Win</kbd>+<kbd>H</kbd> - htop</dt>
 <dt><kbd>Win</kbd>+<kbd>I</kbd> - yad icon browser</dt>
