@@ -95,6 +95,43 @@ and there you go; easiest 20 minutes you will spend today with the biggest retur
 <dt><kbd>Win</kbd>+<kbd>R</kbd> - ssr, recording</dt>
 <dt><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd> - flick picker</dt> </dl>
 
+## Maybe you want a different kernel
+
+### Liquorix
+
+```
+echo 'deb http://liquorix.net/debian $(lsb_release -cs) main' | sudo tee /etc/apt/sources.list.d/liquorix.list
+```
+
+```update```
+
+```
+install linux-image-liquorix-amd64 linux-headers-liquorix-amd64
+```
+ 
+
+### XanMod
+
+```
+wget -qO- https://dl.xanmod.org/archive.key | sudo gpg --dearmor --yes -o /usr/share/keyrings/xanmod-archive-keyring.gpg
+```
+
+```	
+. /etc/os-release
+printf '%s\n' \
+"Types: deb" \
+"URIs: https://deb.xanmod.org" \
+"Suites: $VERSION_CODENAME" \
+"Components: main" \
+"Signed-By: /usr/share/keyrings/xanmod-archive-keyring.gpg" | sudo tee /etc/apt/sources.list.d/xanmod-release.sources > /dev/null
+```
+
+```update```
+
+ ```
+install linux-xanmod-x64v3
+```
+
 later
 
 
