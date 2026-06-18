@@ -61,6 +61,11 @@ and there you go. Have fun.
 2. set the weather in the **lxpanel** weather widget
 3. <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd> one time, <kbd>Win</kbd>+<kbd>H</kbd>
 
+## Current menu
+
+<img src="https://madcarters.com/images/menuupd.jpg">
+
+
 ## A few of the keybinds
 <dl>
 	<dt>
