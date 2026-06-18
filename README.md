@@ -11,7 +11,7 @@ Thanks to all the maintainers and devs and clever folk out there because computi
 
 ## What to be aware of out the gate
 
-1. Defaults to an external monitor, *see ~/.config/openbox/autostart
+1. Defaults to an external monitor, *see ~/.config/openbox/autostart*
 2. boots to a tty, there is no login/display manager
 3. You may want to install connman or network-manager if you need wifi
 4. you may uncomment:   
@@ -89,4 +89,5 @@ and there you go. Have fun.
 <dt><kbd>Win</kbd>+<kbd>R</kbd> - ssr, recording</dt>
 <dt><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd> - flick picker</dt> </dl>
 
-see ya
+See ya
+<img src="https://madcarters.com/images/logout.jpg">
