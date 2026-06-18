@@ -90,4 +90,5 @@ and there you go. Have fun.
 <dt><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd> - flick picker</dt> </dl>
 
 See ya
+
 <img src="https://madcarters.com/images/logout.jpg">
