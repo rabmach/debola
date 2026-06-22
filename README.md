@@ -55,7 +55,7 @@ and there you go; easiest 13 minutes you will spend today with the biggest retur
 
 ## Post Install Tasks, **The Horror!**
 
-	in **~/.config**
+	in ~/.config
 
 		pianobar/config     # add your creds and check line 11
 		weather_sh.rc       # your_api and your_city_code
