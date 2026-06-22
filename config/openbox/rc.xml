@@ -987,12 +987,9 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-    <!--
-    <application class="~/Downloads/floorp/floorp">
-      <decor>no</decor>
-      <fullscreen>no</fullscreen>
-      <maximized>true</maximized>
-    </application>
-  -->
+  <application role="browser">
+  <maximized>true</maximized>
+  <decor>no</decor>
+</application>
   </applications>
 </openbox_config>
