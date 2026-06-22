@@ -13,7 +13,7 @@ Basically this is just an easy restore solution for me on a new or formatted dri
 
 Thanks to all the maintainers and devs and clever folk out there because computing with the Linux is (still) the best thing ever.
 
-## Heads up
+## Heads Up
 
 1. Defaults to an external monitor, *see ~/.config/openbox/autostart*
 2. boots to a tty, there is no login/display manager. I install [loginfetch](https://github.com/leomarcov/debian-openbox/tree/master/30_script_loginfetch) modified to negate physlock
@@ -22,7 +22,7 @@ Thanks to all the maintainers and devs and clever folk out there because computi
 ```#[ ! "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ] && PROMPT_COMMAND="startx && exit;"```  
 at the bottom of restored ~/.profile in order to log in automatically after you input your credentials.
 
-## Get There from Here, Simple and quick
+## Get There from Here, Simple and Quick
 
 Install Debian from the [net installer](https://www.debian.org/CD/netinst/), choose advanced, expert install and opt to give a password to the **root user** and choose only **standard system utilities** at the software installation part, un-check the rest.
 
