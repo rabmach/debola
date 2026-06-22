@@ -2,16 +2,18 @@
 
 ![Openbox desktop on Debian](https://madcarters.com/images/alanordic.jpg)
 
-Handy Openbox desktop wickedness on a Debian system you can run with **just like that** after a net install and never have to worry about this sort of thing again. This installs a minimal desktop and you will probably install more stuff following, but, this is a good place to start. Best for a fresh install, but, scripts can be run any time and with subsequent users.
+An Openbox desktop on a Debian system. Wicked.
+
+This installs a lightweight fully functional desktop following a net install of Debian. You will probably install more stuff following, but, this is a good place to start. Best for a fresh install, but, script(s) can be run any time and with subsequent users.
 
 This desktop setup is a pretty good way to go if you enjoy the Linux. It has been reliable and functional for me for a long time. It's out of the way, light, fast, boring - no whiz-bang at all, like, no ricing, or, whatever.
-I don't even know what that is. It's pretty, though, and X11, too, so, you know, it's, ahhh, mature.
+I don't even know what that is. It's pretty, though, and X11. Also uses the fastcompmgr compositor.
 
-Basically this is just an easy restore solution for me on a new or formatted drive that works so well I put it up here; have at it. I run it when I reinstall and keep ~/me, too. Just so handy.
+Basically this is just an easy restore solution for me on a new or formatted drive that works really well. I put it up here for the handiness. I run it when I reinstall without formatting ~/, too. Just so handy.
 
 Thanks to all the maintainers and devs and clever folk out there because computing with the Linux is (still) the best thing ever.
 
-## What to be aware of out the gate
+## Heads up
 
 1. Defaults to an external monitor, *see ~/.config/openbox/autostart*
 2. boots to a tty, there is no login/display manager. I install [loginfetch](https://github.com/leomarcov/debian-openbox/tree/master/30_script_loginfetch) modified to negate physlock
@@ -24,9 +26,7 @@ at the bottom of restored ~/.profile in order to log in automatically after you 
 
 Install Debian from the [net installer](https://www.debian.org/CD/netinst/), choose advanced, expert install and opt to give a password to the **root user** and choose only **standard system utilities** at the software installation part, un-check the rest.
 
-Reboot
-
-Log in as root to install sudo, aptitude, and git
+After the reboot log in as root to install sudo, aptitude, and git
 
 ```apt-get install -y sudo aptitude git```  
 
@@ -40,7 +40,7 @@ Following that, log out and log in as your regular user and clone the repo
 
 Then, simply cd into debola, chmod +x restore.sh, and then run it: ./restore.sh
 
-and there you go; easiest 20 minutes you will spend today with the biggest return, by miles. Have fun.
+and there you go; easiest 13 minutes you will spend today with the biggest return, by miles. Have fun.
 
 ## Usage
 
@@ -93,7 +93,7 @@ and there you go; easiest 20 minutes you will spend today with the biggest retur
 <dt><kbd>Win</kbd>+<kbd>K</kbd> - KeepassXC</dt>
 <dt><kbd>Win</kbd>+<kbd>W</kbd> - LibreOffice Writer</dt>
 <dt><kbd>Win</kbd>+<kbd>R</kbd> - simplescreenrecorder</dt>
-<dt><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd> - flick picker</dt> </dl>
+<dt><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd> - random movie</dt> </dl>
 
 ## Maybe you want a different kernel
 
