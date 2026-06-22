@@ -92,7 +92,7 @@ and there you go; easiest 20 minutes you will spend today with the biggest retur
 <dt><kbd>Win</kbd>+<kbd>I</kbd> - yad icon browser</dt>
 <dt><kbd>Win</kbd>+<kbd>K</kbd> - KeepassXC</dt>
 <dt><kbd>Win</kbd>+<kbd>W</kbd> - LibreOffice Writer</dt>
-<dt><kbd>Win</kbd>+<kbd>R</kbd> - ssr, recording</dt>
+<dt><kbd>Win</kbd>+<kbd>R</kbd> - simplescreenrecorder</dt>
 <dt><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd> - flick picker</dt> </dl>
 
 ## Maybe you want a different kernel
