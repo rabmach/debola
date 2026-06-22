@@ -2,9 +2,9 @@
 
 ![Openbox desktop on Debian](https://madcarters.com/images/alanordic.jpg)
 
-An Openbox desktop on a Debian system. Wicked.
+A **bespoke Openbox desktop** on a Debian system that's a bit bash heavy. Wicked.
 
-This installs a lightweight fully functional desktop following a net install of Debian. You will probably install more stuff following, but, this is a good place to start. Best for a fresh install, but, script(s) can be run any time and with subsequent users.
+This installs a lightweight fully functional desktop following a net install of Debian. No doubt you will install more stuff, but, this is a good place to start. Best for a fresh install, but, script(s) can be run any time and with subsequent users.
 
 This desktop setup is a pretty good way to go if you enjoy the Linux. It has been reliable and functional for me for a long time. It's out of the way, light, fast, boring - no whiz-bang at all, like, no ricing, or, whatever.
 I don't even know what that is. It's pretty, though, and X11. Also uses the fastcompmgr compositor.
