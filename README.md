@@ -59,7 +59,7 @@ and there you go; easiest 13 minutes you will spend today with the biggest retur
 
 		pianobar/config     # add your creds and check line 11
 		weather_sh.rc       # your_api and your_city_code
-		~/bin/weather.sh 	  # lines 5 and 6
+		~/bin/weather.sh 	# lines 5 and 6
 
 1. run **obconf** and change the theme to Nord-Openbox-Theme-Master
 2. set the weather in the **lxpanel** weather widget
