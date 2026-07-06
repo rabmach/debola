@@ -4,12 +4,10 @@
 
 An Openbox desktop on a Debian system that kicks all kinna ass.
 
-This installs a lightweight fully functional desktop following a net install of Debian. No doubt you will install more stuff, but, this is a good place to start. Best for a fresh install, but, script can be run any time and with subsequent users.
+This installs a lightweight, fully functional and completely opinionated desktop following a net install of Debian. No doubt you will install more stuff, but, this is a good place to start. Best for a fresh install, but, script can be run any time and with subsequent users.
 
-This desktop setup is a pretty good way to go if you enjoy the Linux. It has been reliable and functional for me for a long time. It's out of the way, light, fast, boring - no whiz-bang at all, like, no ricing, or, whatever.
+This desktop setup is a pretty good way to go if you enjoy the Linux. It's great for older machines or low-spec models and is pretty wicked with newer hardware, too. It has been reliable and functional for me for a long time. It's out of the way, light, fast, boring - no whiz-bang at all, like, no ricing, or, whatever.
 I don't even know what that is. It's pretty, though, and X11. Also uses the fastcompmgr compositor.
-
-Basically this is just an easy restore solution for me on a new or formatted drive that works really well. I put it up here for the handiness. I run it when I reinstall without formatting ~/, too. Just so handy.
 
 Thanks to all the maintainers and devs and clever folk out there because computing with the Linux is (still) the best thing ever.
 
