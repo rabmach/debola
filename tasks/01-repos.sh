@@ -45,26 +45,26 @@ else
     log "Mozilla pinning already exists. Skipping."
 fi
 
-if [[ ! -f /etc/apt/sources.list.d/xanmod-release.sources ]]; then
-    log "Adding XanMod repository..."
-    wget -qO- https://dl.xanmod.org/archive.key \
-        | sudo gpg --dearmor --yes -o /usr/share/keyrings/xanmod-archive-keyring.gpg 2>/dev/null
-    if [[ -f /etc/os-release ]]; then
-        . /etc/os-release
-        printf '%s\n' \
-            "Types: deb" \
-            "URIs: https://deb.xanmod.org" \
-            "Suites: $VERSION_CODENAME" \
-            "Components: main" \
-            "Signed-By: /usr/share/keyrings/xanmod-archive-keyring.gpg" \
-            | sudo tee /etc/apt/sources.list.d/xanmod-release.sources > /dev/null
-        log "XanMod repository added (suite: $VERSION_CODENAME)."
-    else
-        warn "/etc/os-release not found. XanMod repository not added."
-    fi
-else
-    log "XanMod repository already exists. Skipping."
-fi
+##if [[ ! -f /etc/apt/sources.list.d/xanmod-release.sources ]]; then
+##    log "Adding XanMod repository..."
+##    wget -qO- https://dl.xanmod.org/archive.key \
+##        | sudo gpg --dearmor --yes -o /usr/share/keyrings/xanmod-archive-keyring.gpg 2>/dev/null
+##    if [[ -f /etc/os-release ]]; then
+##        . /etc/os-release
+##        printf '%s\n' \
+##            "Types: deb" \
+##            "URIs: https://deb.xanmod.org" \
+##            "Suites: $VERSION_CODENAME" \
+##            "Components: main" \
+##            "Signed-By: /usr/share/keyrings/xanmod-archive-keyring.gpg" \
+##            | sudo tee /etc/apt/sources.list.d/xanmod-release.sources > /dev/null
+##        log "XanMod repository added (suite: $VERSION_CODENAME)."
+##    else
+##        warn "/etc/os-release not found. XanMod repository not added."
+##    fi
+##else
+##    log "XanMod repository already exists. Skipping."
+##fi
 
 log "Updating apt package lists..."
 if sudo apt-get update 2>&1 | tee -a "$LOG_FILE"; then
