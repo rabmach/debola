@@ -4,7 +4,7 @@
 
 An Openbox desktop on a Debian system that kicks all kinna ass.
 
-This installs a lightweight fully functional desktop following a net install of Debian. No doubt you will install more stuff, but, this is a good place to start. Best for a fresh install, but, script(s) can be run any time and with subsequent users.
+This installs a lightweight fully functional desktop following a net install of Debian. No doubt you will install more stuff, but, this is a good place to start. Best for a fresh install, but, script can be run any time and with subsequent users.
 
 This desktop setup is a pretty good way to go if you enjoy the Linux. It has been reliable and functional for me for a long time. It's out of the way, light, fast, boring - no whiz-bang at all, like, no ricing, or, whatever.
 I don't even know what that is. It's pretty, though, and X11. Also uses the fastcompmgr compositor.
@@ -99,40 +99,13 @@ and there you go; easiest 13 minutes you will spend today with the biggest retur
 
 ## Maybe you want a different kernel
 
-### Liquorix
+[Liquorix](https://liquorix.net/)
 
-```
-echo 'deb http://liquorix.net/debian $(lsb_release -cs) main' | sudo tee /etc/apt/sources.list.d/liquorix.list
-```
-
-```update```
-
-```
-install linux-image-liquorix-amd64 linux-headers-liquorix-amd64
-```
  
 
-### XanMod
+[XanMod](https://xanmod.org/)
 
-```
-wget -qO- https://dl.xanmod.org/archive.key | sudo gpg --dearmor --yes -o /usr/share/keyrings/xanmod-archive-keyring.gpg
-```
 
-```	
-. /etc/os-release
-printf '%s\n' \
-"Types: deb" \
-"URIs: https://deb.xanmod.org" \
-"Suites: $VERSION_CODENAME" \
-"Components: main" \
-"Signed-By: /usr/share/keyrings/xanmod-archive-keyring.gpg" | sudo tee /etc/apt/sources.list.d/xanmod-release.sources > /dev/null
-```
-
-```update```
-
- ```
-install linux-xanmod-x64v3
-```
 
 later
 
