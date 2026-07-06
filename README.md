@@ -44,7 +44,10 @@ Following that, log out and log in as your regular user and clone the repo
 cd into debola:
 	
 	chmod +x restore.sh
-	then run it: ./restore.sh
+
+then run it: 
+
+	./restore.sh
 
 and there you go; easiest 13 minutes you will spend today with the biggest return, by miles. Have fun.
 
