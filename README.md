@@ -39,7 +39,7 @@ Then run **visudo** and add user beneath the root user listing like this:
 
 Following that, log out and log in as your regular user and clone the repo
 
-	git clone https://github.com/rabmach/debola.git``
+	git clone https://github.com/rabmach/debola.git
 
 cd into debola:
 	
