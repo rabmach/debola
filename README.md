@@ -10,19 +10,33 @@ This desktop setup is a pretty good way to go if you enjoy the Linux. It's great
 I don't even know what that is. It's pretty, though, and X11. Also uses the fastcompmgr compositor.
 
 file manager is thunar (win+f)
+
 panel is lxpanel
+
 menu is custom, openbox (win+z)
+
 terminal is alacritty (win+t)
+
 shell is bash
+
 email is claws-mail (win+m)
+
 image viewer is gpicview
+
 gimp is installed
+
 'media' is mpv
+
 tunes with audacious (win+a)
+
 tunes with pianobar (win+p)
+
 libreoffice (win+w)
+
 text editor is sublime-text (win+e)
+
 but geany is installed, too
+
 and nano
 
 **see the 02-packages.sh script** in the tasks directory for packages installed
