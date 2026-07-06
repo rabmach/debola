@@ -2,7 +2,7 @@
 
 ![Openbox desktop on Debian](https://madcarters.com/images/alanordic.jpg)
 
-A **bespoke Openbox desktop** on a Debian system that's a bit bash heavy. Wicked.
+An Openbox desktop on a Debian system that kicks all kinna ass.
 
 This installs a lightweight fully functional desktop following a net install of Debian. No doubt you will install more stuff, but, this is a good place to start. Best for a fresh install, but, script(s) can be run any time and with subsequent users.
 
