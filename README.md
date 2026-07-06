@@ -1,4 +1,4 @@
-## Debian and Openbox Restoration Script(s)
+## Debian and Openbox Restoration Script
 
 ![Openbox desktop on Debian](https://madcarters.com/images/alanordic.jpg)
 
