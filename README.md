@@ -24,7 +24,10 @@ at the bottom of restored ~/.profile in order to log in automatically after you 
 
 ## Get There from Here, Simple and Quick
 
-Install Debian from the [net installer](https://www.debian.org/CD/netinst/), choose advanced, expert install and opt to give a password to the **root user** and choose only **standard system utilities** at the software installation part, un-check the rest.
+Install Debian from the [net installer](https://www.debian.org/CD/netinst/), choose advanced, expert install
+
+	1. opt to give a password to the **root user**
+	2. choose only **standard system utilities** at the software installation part, un-check the rest.
 
 After the reboot log in as root to install sudo, aptitude, and git
 
