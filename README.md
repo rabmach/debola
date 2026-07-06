@@ -31,17 +31,20 @@ Install Debian from the [net installer](https://www.debian.org/CD/netinst/), cho
 
 After the reboot log in as root to install sudo, aptitude, and git
 
-```apt-get install -y sudo aptitude git```  
+	apt-get install -y sudo aptitude git
 
 Then run **visudo** and add user beneath the root user listing like this:  
 
-```$USER ALL=(ALL:ALL) NOPASSWD:ALL```
+	$USER ALL=(ALL:ALL) NOPASSWD:ALL
 
 Following that, log out and log in as your regular user and clone the repo
 
-```git clone https://github.com/rabmach/debola.git```  
+	git clone https://github.com/rabmach/debola.git``
 
-Then, simply cd into debola, chmod +x restore.sh, and then run it: ./restore.sh
+cd into debola:
+	
+	chmod +x restore.sh
+	then run it: ./restore.sh
 
 and there you go; easiest 13 minutes you will spend today with the biggest return, by miles. Have fun.
 
