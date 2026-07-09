@@ -51,6 +51,7 @@ and nano
 4. you may uncomment:   
 ```#[ ! "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ] && PROMPT_COMMAND="startx && exit;"```  
 at the bottom of restored ~/.profile in order to log in automatically after you input your credentials.
+5. No printing support is installed by default, you may wanna: cups, maybe hplip.
 
 
 ## Get There from Here, Simple and Quick
