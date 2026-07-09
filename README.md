@@ -1,4 +1,4 @@
-## Debian and Openbox Restoration Script
+# Debian and Openbox Restoration Script
 
 An Openbox desktop on a Debian (Trixie) system that kicks all kinna ass. Read the heads-up below and happy days.
 
@@ -6,11 +6,11 @@ This installs a lightweight, fully functional and completely opinionated desktop
 
 ![Openbox desktop on Debian](https://madcarters.com/images/alanordic.jpg)
 
-It's great for older machines or low-spec models and is pretty wicked with newer hardware, too. It has been reliable and functional for (me, others) for a long time. It's out of the way, light, fast, boring - no whiz-bang at all other than handy; no ricing, or, whatever.
-I don't even know what that is. It's pretty, though, and X11. Also uses the fastcompmgr compositor.
+This setup is great for older machines (say, an HP EliteBook 8440p) or low-spec models and is smokin' on newer hardware (a Lenovo p53s, maybe). It has been reliable and functional for (me, others) for a long time. It's out of the way, light, fast, boring - no whiz-bang at all other than handy; no ricing, or, whatever.
+I am not even sure what that is. It's pretty, though, and X11. Also uses the fastcompmgr compositor.
 
 
-## Get There from Here, Simple and Quick
+# Get There from Here, Simple and Quick
 
 Install Debian from the [net installer](https://www.debian.org/CD/netinst/), choose advanced, expert install
 
@@ -33,7 +33,7 @@ cd into debola:
 	
 	chmod +x restore.sh
 
-## Run it, see usage
+# Run it; usage
 
 ```
    ./restore.sh                   # Run full restoration
@@ -47,7 +47,7 @@ cd into debola:
 and there you go; a new Debian and Openbox setup and it's the easiest 13 minutes you will spend today with the biggest return, by miles. Have fun.
 
 
-## Heads Up
+# Heads Up - Important Stuff
 
 1. Defaults to an external monitor, *see ~/.config/openbox/autostart*
 2. boots to a tty, there is no login/display manager. I install [loginfetch](https://github.com/leomarcov/debian-openbox/tree/master/30_script_loginfetch) modified to negate physlock
@@ -58,9 +58,7 @@ at the bottom of restored ~/.profile in order to log in automatically after you 
 5. No printing support is installed by default, you may wanna: cups, maybe hplip.
 
 
-
-
-## Post Install Tasks, **The Horror!**
+# Post Install Tasks, **The Horror!**
 
 	in ~/.config
 
@@ -71,71 +69,53 @@ at the bottom of restored ~/.profile in order to log in automatically after you 
 1. set the weather in the **lxpanel** weather widget
 2. <kbd>Win</kbd>+<kbd>H</kbd> for htop, <kbd>Win</kbd>+<kbd>insert</kbd> captures screen
 
+# Your Basic Applications
 
-
-
-|Package | Purpose|
-|:--------|:--------|
-|Thunar  | File Manager|
+|Package | Purpose| Handy
+|:--------|:--------|:--------:|
+|Thunar  | File Manager|<kbd>Win</kbd>+<kbd>F</kbd>|
 |lxpanel | panel|
-|Alacritty| terminal|
+|Alacritty| terminal|<kbd>Win</kbd>+<kbd>T</kbd>|
 |Bash    | shell|
-|Firefox | browsah|
-|Claws-Mail| email|
+|Firefox | browsah|<kbd>Win</kbd>+<kbd>B</kbd>|
+|Claws-Mail| email|<kbd>Win</kbd>+<kbd>M</kbd>|
 |Gpicview| image viewer|
 |Gimp    | art & stuff|
 |MPV     | media player|
-|Audacious| music|
-|Pianobar| mo music|
-|LibreOffice| office|
-|Sublime-Text| editor|
+|Audacious| music|<kbd>Win</kbd>+<kbd>A</kbd>|
+|Pianobar| mo music|<kbd>Win</kbd>+<kbd>P</kbd>|
+|LibreOffice| office|<kbd>Win</kbd>+<kbd>W</kbd>|
+|Sublime-Text| editor|<kbd>Win</kbd>+<kbd>E</kbd>|
 |Geany   | all in session|
 
 
 **see the 02-packages.sh script** in the tasks directory for packages installed
 
+| Couple movin' around keybinds | Control Pianobar|
+|:--------|:--------|
+|<kbd>Win</kbd>+<kbd>Z</kbd> - custom openbox menu|<kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Home</kbd> - like the tune|
+|<kbd>win</kbd>+<kbd>L</kbd> - locks the desktop|<kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Left arrow</kbd> - history|
+|<kbd>win</kbd>+<kbd>S</kbd> - screenshot menu|<dt><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Up arrow</kbd> - switch station|
+|<kbd>Print</kbd> - xfce4-screenshooter|<kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Down arrow</kbd> - pause|
+|<kbd>Win</kbd>+<kbd>I</kbd> - yad icon browser|<kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Right arrow</kbd> - next tune|
+|<kbd>Win</kbd>+<kbd>K</kbd> - KeepassXC|<kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Delete</kbd> - quit pianobar|
+|<kbd>Win</kbd>+<kbd>R</kbd> - simplescreenrecorder|
+|<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd> - random movie|
 
 
-## Current menu
-
-<img src="https://madcarters.com/images/menuupd.jpg">
 
 
-## A few of the keybinds
-<dl>
-	<dt>
-<kbd>Win</kbd>+<kbd>Z</kbd> - custom openbox menu</dt>
-<dt><kbd>win</kbd>+<kbd>L</kbd> - locks the desktop</dt>
-<dt><kbd>win</kbd>+<kbd>S</kbd> - screenshot menu</dt>
-<dt><kbd>Print</kbd> - xfce4-screenshooter</dt>
-<dt><kbd>Win</kbd>+<kbd>A</kbd> - Audacity</dt>
-<dt><kbd>Win</kbd>+<kbd>P</kbd> - launch pianobar</dt>
-	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Home</kbd> - like the tune</dd>
-	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Left arrow</kbd> - history</dd>
-	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Right arrow</kbd> - next tune</dd>
-	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Up arrow</kbd> - switch station</dd>
-	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Down arrow</kbd> - pause</dd>
-	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Delete</kbd> - quit pianobar</dd>
-<dt><kbd>Win</kbd>+<kbd>B</kbd> - Firefox</dt>
-<dt><kbd>Win</kbd>+<kbd>F</kbd> - x-file-manager (Thunar)</dt>
-<dt><kbd>Win</kbd>+<kbd>E</kbd> - x-text-editor (Sublime-Text)</dt>
-<dt><kbd>Win</kbd>+<kbd>T</kbd> - x-terminal-emulator (Alacritty)</dt>
-<dt><kbd>Win</kbd>+<kbd>M</kbd> - Claws-Mail</dt>
-<dt><kbd>Win</kbd>+<kbd>H</kbd> - htop</dt>
-<dt><kbd>Win</kbd>+<kbd>I</kbd> - yad icon browser</dt>
-<dt><kbd>Win</kbd>+<kbd>K</kbd> - KeepassXC</dt>
-<dt><kbd>Win</kbd>+<kbd>W</kbd> - LibreOffice Writer</dt>
-<dt><kbd>Win</kbd>+<kbd>R</kbd> - simplescreenrecorder</dt>
-<dt><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd> - random movie</dt> </dl>
+
+
+
+
+
+
+
 
 ## Maybe you want a different kernel
 
-[Liquorix](https://liquorix.net/)
-
- 
-
-[XanMod](https://xanmod.org/)
-
+[Liquorix](https://liquorix.net/) or [XanMod](https://xanmod.org/)
 
 
 later
