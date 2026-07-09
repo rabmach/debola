@@ -1,6 +1,6 @@
 ## Debian and Openbox Restoration Script
 
-An Openbox desktop on a Debian (Trixie) system that kicks all kinna ass.
+An Openbox desktop on a Debian (Trixie) system that kicks all kinna ass. Read the heads-up below and happy days.
 
 This installs a lightweight, fully functional and completely opinionated desktop following a net install of Debian. No doubt you will install more stuff, but, this is a good place to start. Best for a fresh install, but, script can be run any time and with subsequent users.
 
