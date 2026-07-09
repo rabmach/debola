@@ -16,6 +16,7 @@ I don't even know what that is. It's pretty, though, and X11. Also uses the fast
 |Openbox | custom menu|
 |Alacritty| terminal|
 |Bash    | shell|
+|Firefox | browsah|
 |Claws-Mail| email|
 |Gpicview| image viewer|
 |Gimp    | art & stuff|
