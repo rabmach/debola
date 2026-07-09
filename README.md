@@ -1,6 +1,6 @@
 # Debian and Openbox Restoration Script
 
-An Openbox desktop on a Debian (Trixie) system that kicks all kinna ass. Read the heads-up below and happy days.
+An Openbox desktop on a Debian (Trixie) system that kicks all kinna ass.
 
 This installs a lightweight, fully functional and completely opinionated desktop following a net install of Debian. No doubt you will install more stuff, but, this is a good place to start. Best for a fresh install, but, script can be run any time and with subsequent users.
 
@@ -12,7 +12,7 @@ I am not even sure what that is. It's pretty, though, and X11. Also uses the fas
 
 # Basic Applications, whatnot
 
-|Package | Purpose | Other keybinds|
+| Package | Purpose | Other keybinds|
 |:--------|:--------|:--------|
 |Thunar  | File Manager <kbd>Win</kbd>+<kbd>F</kbd>|<kbd>Win</kbd>+<kbd>Z</kbd> - menu|
 |lxpanel | panel|<kbd>win</kbd>+<kbd>L</kbd> - locks the desktop|
@@ -59,34 +59,25 @@ cd into debola:
 
 	./restore.sh                   # Run full restoration
    
-	./restore.sh --help            # Show help
-	./restore.sh --skip 01         # Skip a specific task (by number)
-	./restore.sh --only 04         # Run only a specific task
-	./restore.sh --list            # List available tasks
-	./restore.sh --dry-run         # Show what would be done without doing it
+```
+./restore.sh --help            # Show help
+./restore.sh --skip 01         # Skip a specific task (by number)
+./restore.sh --only 04         # Run only a specific task
+./restore.sh --list            # List available tasks
+./restore.sh --dry-run         # Show what would be done without doing it
+```
 
 
-...And there you go; a new Debian and Openbox setup and it's the easiest 13 minutes you will spend today with the biggest return, by miles. Have fun.
+There you go; a new Debian and Openbox setup and it's the easiest 13 minutes you will spend today with the biggest return, by miles. Have fun.
 
 
-# Heads Up
-
-1. Defaults to an external monitor, *see ~/.config/openbox/autostart*
-2. boots to a tty, there is no login/display manager. I install [loginfetch](https://github.com/leomarcov/debian-openbox/tree/master/30_script_loginfetch) modified to negate physlock
-3. You may want to install **connman** or **network-manager** if you need wifi
-4. you may uncomment:   
-```#[ ! "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ] && PROMPT_COMMAND="startx && exit;"```  
-at the bottom of restored ~/.profile in order to log in automatically after you input your credentials.
-5. No printing support is installed by default, you may wanna: cups, maybe hplip.
-
-
-# Post Install
-
-+ edit **~/.config/pianobar/config** to add your creds and check line 11
-+ edit **~/.config/weather_sh.rc** add your_api and your_city_code
-+ edit **~/bin/weather.sh** look at lines 5 and 6
-+ set the weather in the **lxpanel** weather widget
-+ <kbd>Win</kbd>+<kbd>H</kbd> for htop, <kbd>Win</kbd>+<kbd>insert</kbd> captures screen
+| Heads Up| Post Install|
+|:--------|:--------|
+| Defaults to an external monitor | edit **~/.config/pianobar/config** to add your creds and check line 11 |
+| boots to a tty | edit **~/.config/weather_sh.rc** add your_api and your_city_code |
+| install **network-manager** if you need wifi | edit **~/bin/weather.sh** look at lines 5 and 6 |
+| uncomment last line in restored ~/.profile | config the **lxpanel** weather widget |
+| No print support, install cups and maybe hplip | <kbd>Win</kbd>+<kbd>H</kbd> for htop, <kbd>Win</kbd>+<kbd>insert</kbd> captures screen |
 
 
 ## Kernels
