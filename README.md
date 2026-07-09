@@ -69,7 +69,7 @@ then run it:
 
 	./restore.sh
 
-and there you go; easiest 13 minutes you will spend today with the biggest return, by miles. Have fun.
+and there you go; a new Debian and Openbox setup and it's the easiest 13 minutes you will spend today with the biggest return, by miles. Have fun.
 
 ## Usage
 
@@ -105,14 +105,14 @@ and there you go; easiest 13 minutes you will spend today with the biggest retur
 <dt><kbd>win</kbd>+<kbd>L</kbd> - locks the desktop</dt>
 <dt><kbd>win</kbd>+<kbd>S</kbd> - screenshot menu</dt>
 <dt><kbd>Print</kbd> - xfce4-screenshooter</dt>
-<dt><kbd>Win</kbd>+<kbd>A</kbd> - Audacity, playing</dt>
+<dt><kbd>Win</kbd>+<kbd>A</kbd> - Audacity</dt>
 <dt><kbd>Win</kbd>+<kbd>P</kbd> - launch pianobar</dt>
 	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Home</kbd> - like the tune</dd>
 	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Left arrow</kbd> - history</dd>
 	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Right arrow</kbd> - next tune</dd>
 	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Up arrow</kbd> - switch station</dd>
 	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Down arrow</kbd> - pause</dd>
-	<dd><kbd>win</kbd>+<kbd>Delete</kbd> - quit pianobar</dd>
+	<dd><kbd>win</kbd>+<kbd>alt</kbd>+<kbd>Delete</kbd> - quit pianobar</dd>
 <dt><kbd>Win</kbd>+<kbd>B</kbd> - Firefox</dt>
 <dt><kbd>Win</kbd>+<kbd>F</kbd> - x-file-manager (Thunar)</dt>
 <dt><kbd>Win</kbd>+<kbd>E</kbd> - x-text-editor (Sublime-Text)</dt>
