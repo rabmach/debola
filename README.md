@@ -9,35 +9,23 @@ This installs a lightweight, fully functional and completely opinionated desktop
 This desktop setup is a pretty good way to go if you enjoy the Linux. It's great for older machines or low-spec models and is pretty wicked with newer hardware, too. It has been reliable and functional for me for a long time. It's out of the way, light, fast, boring - no whiz-bang at all, like, no ricing, or, whatever.
 I don't even know what that is. It's pretty, though, and X11. Also uses the fastcompmgr compositor.
 
-file manager is thunar (win+f)
+|Package | Purpose|
+|:--------|:--------|
+|Thunar  | File Manager|
+|lxpanel | panel|
+|Openbox | custom menu|
+|Alacritty| terminal|
+|Bash    | shell|
+|Claws-Mail| email|
+|Gpicview| image viewer|
+|Gimp    | art & stuff|
+|MPV     | media player|
+|Audacious| music|
+|Pianobar| mo music|
+|LibreOffice| office|
+|Sublime-Text| editor|
+|Geany   | all in session|
 
-panel is lxpanel
-
-menu is custom, openbox (win+z)
-
-terminal is alacritty (win+t)
-
-shell is bash
-
-email is claws-mail (win+m)
-
-image viewer is gpicview
-
-gimp is installed
-
-'media' is mpv
-
-tunes with audacious (win+a)
-
-tunes with pianobar (win+p)
-
-libreoffice (win+w)
-
-text editor is sublime-text (win+e)
-
-but geany is installed, too
-
-and nano
 
 **see the 02-packages.sh script** in the tasks directory for packages installed
 
