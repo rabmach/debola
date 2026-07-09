@@ -1,45 +1,13 @@
 ## Debian and Openbox Restoration Script
 
-![Openbox desktop on Debian](https://madcarters.com/images/alanordic.jpg)
-
-An Openbox desktop on a Debian system that kicks all kinna ass.
+An Openbox desktop on a Debian (Trixie) system that kicks all kinna ass.
 
 This installs a lightweight, fully functional and completely opinionated desktop following a net install of Debian. No doubt you will install more stuff, but, this is a good place to start. Best for a fresh install, but, script can be run any time and with subsequent users.
 
-This desktop setup is a pretty good way to go if you enjoy the Linux. It's great for older machines or low-spec models and is pretty wicked with newer hardware, too. It has been reliable and functional for me for a long time. It's out of the way, light, fast, boring - no whiz-bang at all, like, no ricing, or, whatever.
+![Openbox desktop on Debian](https://madcarters.com/images/alanordic.jpg)
+
+It's great for older machines or low-spec models and is pretty wicked with newer hardware, too. It has been reliable and functional for (me, others) for a long time. It's out of the way, light, fast, boring - no whiz-bang at all other than handy; no ricing, or, whatever.
 I don't even know what that is. It's pretty, though, and X11. Also uses the fastcompmgr compositor.
-
-|Package | Purpose|
-|:--------|:--------|
-|Thunar  | File Manager|
-|lxpanel | panel|
-|Alacritty| terminal|
-|Bash    | shell|
-|Firefox | browsah|
-|Claws-Mail| email|
-|Gpicview| image viewer|
-|Gimp    | art & stuff|
-|MPV     | media player|
-|Audacious| music|
-|Pianobar| mo music|
-|LibreOffice| office|
-|Sublime-Text| editor|
-|Geany   | all in session|
-
-
-**see the 02-packages.sh script** in the tasks directory for packages installed
-
-
-
-## Heads Up
-
-1. Defaults to an external monitor, *see ~/.config/openbox/autostart*
-2. boots to a tty, there is no login/display manager. I install [loginfetch](https://github.com/leomarcov/debian-openbox/tree/master/30_script_loginfetch) modified to negate physlock
-3. You may want to install **connman** or **network-manager** if you need wifi
-4. you may uncomment:   
-```#[ ! "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ] && PROMPT_COMMAND="startx && exit;"```  
-at the bottom of restored ~/.profile in order to log in automatically after you input your credentials.
-5. No printing support is installed by default, you may wanna: cups, maybe hplip.
 
 
 ## Get There from Here, Simple and Quick
@@ -65,13 +33,7 @@ cd into debola:
 	
 	chmod +x restore.sh
 
-then run it: 
-
-	./restore.sh
-
-and there you go; a new Debian and Openbox setup and it's the easiest 13 minutes you will spend today with the biggest return, by miles. Have fun.
-
-## Usage
+## Run it, see usage
 
 ```
    ./restore.sh                   # Run full restoration
@@ -81,6 +43,22 @@ and there you go; a new Debian and Openbox setup and it's the easiest 13 minutes
    ./restore.sh --list            # List available tasks
    ./restore.sh --dry-run         # Show what would be done without doing it
 ```
+
+and there you go; a new Debian and Openbox setup and it's the easiest 13 minutes you will spend today with the biggest return, by miles. Have fun.
+
+
+## Heads Up
+
+1. Defaults to an external monitor, *see ~/.config/openbox/autostart*
+2. boots to a tty, there is no login/display manager. I install [loginfetch](https://github.com/leomarcov/debian-openbox/tree/master/30_script_loginfetch) modified to negate physlock
+3. You may want to install **connman** or **network-manager** if you need wifi
+4. you may uncomment:   
+```#[ ! "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ] && PROMPT_COMMAND="startx && exit;"```  
+at the bottom of restored ~/.profile in order to log in automatically after you input your credentials.
+5. No printing support is installed by default, you may wanna: cups, maybe hplip.
+
+
+
 
 ## Post Install Tasks, **The Horror!**
 
@@ -92,6 +70,31 @@ and there you go; a new Debian and Openbox setup and it's the easiest 13 minutes
 
 1. set the weather in the **lxpanel** weather widget
 2. <kbd>Win</kbd>+<kbd>H</kbd> for htop, <kbd>Win</kbd>+<kbd>insert</kbd> captures screen
+
+
+
+
+|Package | Purpose|
+|:--------|:--------|
+|Thunar  | File Manager|
+|lxpanel | panel|
+|Alacritty| terminal|
+|Bash    | shell|
+|Firefox | browsah|
+|Claws-Mail| email|
+|Gpicview| image viewer|
+|Gimp    | art & stuff|
+|MPV     | media player|
+|Audacious| music|
+|Pianobar| mo music|
+|LibreOffice| office|
+|Sublime-Text| editor|
+|Geany   | all in session|
+
+
+**see the 02-packages.sh script** in the tasks directory for packages installed
+
+
 
 ## Current menu
 
