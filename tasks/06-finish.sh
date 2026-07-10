@@ -11,45 +11,51 @@ header "OPTIONAL PACKAGES"
 
 OPTIONAL_PACKAGES=()
 
-echo ""
-echo "  Would you like to install a web browser (Firefox)? [y/N]"
-read -r REPLY
-if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-    OPTIONAL_PACKAGES+=(firefox)
-fi
+# In first-boot mode, skip interactive prompts and install defaults
+if [[ "${FIRST_BOOT:-false}" == "true" ]]; then
+    log "First-boot mode: Installing default optional packages..."
+    OPTIONAL_PACKAGES=(firefox keepassxc alacritty)
+else
+    echo ""
+    echo "  Would you like to install a web browser (Firefox)? [y/N]"
+    read -r REPLY
+    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+        OPTIONAL_PACKAGES+=(firefox)
+    fi
 
-echo ""
-echo "  Would you like to install email support (Claws Mail)? [y/N]"
-read -r REPLY
-if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-    OPTIONAL_PACKAGES+=(claws-mail claws-mail-bogofilter claws-mail-fancy-plugin
-        claws-mail-pgpmime claws-mail-tools claws-mail-pgpinline
-        claws-mail-vcalendar-plugin bogofilter lynx)
-fi
+    echo ""
+    echo "  Would you like to install email support (Claws Mail)? [y/N]"
+    read -r REPLY
+    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+        OPTIONAL_PACKAGES+=(claws-mail claws-mail-bogofilter claws-mail-fancy-plugin
+            claws-mail-pgpmime claws-mail-tools claws-mail-pgpinline
+            claws-mail-vcalendar-plugin bogofilter lynx)
+    fi
 
-echo ""
-echo "  Would you like to install a password manager (KeePassXC)? [y/N]"
-read -r REPLY
-if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-    OPTIONAL_PACKAGES+=(keepassxc)
-fi
+    echo ""
+    echo "  Would you like to install a password manager (KeePassXC)? [y/N]"
+    read -r REPLY
+    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+        OPTIONAL_PACKAGES+=(keepassxc)
+    fi
 
-echo ""
-echo "  Which terminal would you like to install?"
-echo "    1) Alacritty"
-echo "    2) Kitty"
-echo "    3) None"
-read -r REPLY
-case "$REPLY" in
-    1) OPTIONAL_PACKAGES+=(alacritty) ;;
-    2) OPTIONAL_PACKAGES+=(kitty) ;;
-esac
+    echo ""
+    echo "  Which terminal would you like to install?"
+    echo "    1) Alacritty"
+    echo "    2) Kitty"
+    echo "    3) None"
+    read -r REPLY
+    case "$REPLY" in
+        1) OPTIONAL_PACKAGES+=(alacritty) ;;
+        2) OPTIONAL_PACKAGES+=(kitty) ;;
+    esac
 
-echo ""
-echo "  Would you like to install printing support (CUPS)? [y/N]"
-read -r REPLY
-if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-    OPTIONAL_PACKAGES+=(cups system-config-printer)
+    echo ""
+    echo "  Would you like to install printing support (CUPS)? [y/N]"
+    read -r REPLY
+    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+        OPTIONAL_PACKAGES+=(cups system-config-printer)
+    fi
 fi
 
 if [[ ${#OPTIONAL_PACKAGES[@]} -gt 0 ]]; then
@@ -67,12 +73,17 @@ header "EXTERNAL MONITOR SETUP"
 
 AUTOSTART_FILE="$CURRENT_HOME/.config/openbox/autostart"
 MONITOR_DEFAULT="true"
-if [[ -d "$CURRENT_HOME/.screenlayout" ]]; then
-    echo ""
-    echo "  Would you like to default to an external monitor on boot? [Y/n]"
-    read -r REPLY
-    if [[ "$REPLY" =~ ^[Nn]$ ]]; then
-        MONITOR_DEFAULT="false"
+
+if [[ "${FIRST_BOOT:-false}" == "true" ]]; then
+    log "First-boot mode: Skipping external monitor setup."
+else
+    if [[ -d "$CURRENT_HOME/.screenlayout" ]]; then
+        echo ""
+        echo "  Would you like to default to an external monitor on boot? [Y/n]"
+        read -r REPLY
+        if [[ "$REPLY" =~ ^[Nn]$ ]]; then
+            MONITOR_DEFAULT="false"
+        fi
     fi
 fi
 

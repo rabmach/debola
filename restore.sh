@@ -13,6 +13,7 @@
 #   ./restore.sh --only 04         # Run only a specific task
 #   ./restore.sh --list            # List available tasks
 #   ./restore.sh --dry-run         # Show what would be done without doing it
+#   ./restore.sh --first-boot      # First-boot mode (used by debola-first-boot.service)
 #
 
 set -Euo pipefail
@@ -33,6 +34,7 @@ source "$DEBOLA_DIR/lib.sh"
 SKIP_TASKS=()
 ONLY_TASK=""
 DRY_RUN=false
+FIRST_BOOT=false
 
 usage() {
     echo "Usage: $(basename "$0") [OPTIONS]"
@@ -43,6 +45,7 @@ usage() {
     echo "  --skip NUM     Skip a task (can be used multiple times)"
     echo "  --only NUM     Run only a single task"
     echo "  --dry-run      Show what would be done without executing"
+    echo "  --first-boot   First-boot mode (non-interactive, used by systemd service)"
     echo ""
     echo "Tasks:"
     for task in "$DEBOLA_DIR/tasks/"*.sh; do
@@ -60,6 +63,7 @@ while [[ $# -gt 0 ]]; do
         --skip) shift; SKIP_TASKS+=("$1"); shift ;;
         --only) shift; ONLY_TASK="$1"; shift ;;
         --dry-run) DRY_RUN=true; shift ;;
+        --first-boot) FIRST_BOOT=true; shift ;;
         *) echo "Unknown option: $1"; usage ;;
     esac
 done
@@ -92,11 +96,17 @@ if $DRY_RUN; then
     info "DRY RUN MODE - No changes will be made"
 fi
 
+if $FIRST_BOOT; then
+    info "FIRST BOOT MODE - Non-interactive restoration"
+fi
+
 # ── Run tasks ────────────────────────────────────────────────────
 TASKS_DIR="$DEBOLA_DIR/tasks"
 TOTAL=0
 PASSED=0
 FAILED_LIST=()
+
+export FIRST_BOOT
 
 for task in "$TASKS_DIR/"*.sh; do
     task_name=$(basename "$task" .sh)
