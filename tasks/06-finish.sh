@@ -1,13 +1,94 @@
 #!/usr/bin/env bash
 ### part of the DORiS suite of goodness - debian openbox restoration script(s) - 2026 machiner
-# 06-finish.sh - Summary and completion
+# 06-finish.sh - Optional packages, monitor setup, and completion
 #
 
 set -Euo pipefail
 export DEBOLA_DIR="${DEBOLA_DIR:-$(cd "$(dirname "$0")/.." && pwd)}"
 source "$DEBOLA_DIR/lib.sh"
 
-header "RESTORATION SUMMARY"
+header "OPTIONAL PACKAGES"
+
+OPTIONAL_PACKAGES=()
+
+echo ""
+echo "  Would you like to install a web browser (Firefox)? [y/N]"
+read -r REPLY
+if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    OPTIONAL_PACKAGES+=(firefox)
+fi
+
+echo ""
+echo "  Would you like to install email support (Claws Mail)? [y/N]"
+read -r REPLY
+if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    OPTIONAL_PACKAGES+=(claws-mail claws-mail-bogofilter claws-mail-fancy-plugin
+        claws-mail-pgpmime claws-mail-tools claws-mail-pgpinline
+        claws-mail-vcalendar-plugin bogofilter lynx)
+fi
+
+echo ""
+echo "  Would you like to install a password manager (KeePassXC)? [y/N]"
+read -r REPLY
+if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    OPTIONAL_PACKAGES+=(keepassxc)
+fi
+
+echo ""
+echo "  Which terminal would you like to install?"
+echo "    1) Alacritty"
+echo "    2) Kitty"
+echo "    3) None"
+read -r REPLY
+case "$REPLY" in
+    1) OPTIONAL_PACKAGES+=(alacritty) ;;
+    2) OPTIONAL_PACKAGES+=(kitty) ;;
+esac
+
+echo ""
+echo "  Would you like to install printing support (CUPS)? [y/N]"
+read -r REPLY
+if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    OPTIONAL_PACKAGES+=(cups system-config-printer)
+fi
+
+if [[ ${#OPTIONAL_PACKAGES[@]} -gt 0 ]]; then
+    log "Installing optional packages: ${OPTIONAL_PACKAGES[*]}"
+    if sudo apt-get install -y "${OPTIONAL_PACKAGES[@]}" 2>&1 | tee -a "$LOG_FILE"; then
+        log "Optional packages installed."
+    else
+        warn "Some optional packages failed to install."
+    fi
+else
+    log "No optional packages selected."
+fi
+
+header "EXTERNAL MONITOR SETUP"
+
+AUTOSTART_FILE="$CURRENT_HOME/.config/openbox/autostart"
+MONITOR_DEFAULT="true"
+if [[ -d "$CURRENT_HOME/.screenlayout" ]]; then
+    echo ""
+    echo "  Would you like to default to an external monitor on boot? [Y/n]"
+    read -r REPLY
+    if [[ "$REPLY" =~ ^[Nn]$ ]]; then
+        MONITOR_DEFAULT="false"
+    fi
+fi
+
+if [[ "$MONITOR_DEFAULT" == "false" ]] && [[ -f "$AUTOSTART_FILE" ]]; then
+    if grep -q '^\[ -d ~/.screenlayout \]' "$AUTOSTART_FILE"; then
+        sed -i 's|^\(\[ -d ~/.screenlayout \]\)|#\1|' "$AUTOSTART_FILE"
+        log "Disabled external monitor default in autostart."
+    fi
+elif [[ "$MONITOR_DEFAULT" == "true" ]] && [[ -f "$AUTOSTART_FILE" ]]; then
+    if grep -q '^#\[ -d ~/.screenlayout \]' "$AUTOSTART_FILE"; then
+        sed -i 's|^#\[ -d ~/.screenlayout \]|[ -d ~/.screenlayout ]|' "$AUTOSTART_FILE"
+        log "Enabled external monitor default in autostart."
+    fi
+fi
+
+header "RESTORATION COMPLETE"
 
 ERROR_COUNT=0
 WARN_COUNT=0
@@ -15,14 +96,6 @@ WARN_COUNT=0
 if [[ -f "$ERROR_FILE" ]]; then
     ERROR_COUNT=$(grep -c '^\[ERROR\]' "$ERROR_FILE" 2>/dev/null || echo 0)
     WARN_COUNT=$(grep -c '^\[WARN\]' "$ERROR_FILE" 2>/dev/null || echo 0)
-fi
-
-log "  Errors:   $ERROR_COUNT"
-log "  Warnings: $WARN_COUNT"
-
-ICON_FAILURE=false
-if [[ -f "$STATUS_FILE" ]] && grep -q "ICON_FAILURE=1" "$STATUS_FILE" 2>/dev/null; then
-    ICON_FAILURE=true
 fi
 
 echo ""
@@ -39,13 +112,6 @@ if ls "$BACKUP_BASE/"*.tar.gz 2>/dev/null; then
 fi
 
 echo ""
-
-if $ICON_FAILURE; then
-    echo "  [NOTE] Some icon themes failed to install."
-    echo "         You may need to download and install them manually."
-    echo "         See the log for details."
-    echo ""
-fi
 
 if [[ $ERROR_COUNT -gt 0 ]] || [[ $WARN_COUNT -gt 0 ]]; then
     echo "  Some issues were encountered (see $ERROR_FILE for details)."

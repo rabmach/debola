@@ -25,15 +25,12 @@ PACKAGES=(
     unclutter numlockx wget whois bc jq tango-icon-theme obsidian-icon-theme
     arc-theme openbox pianobar orage gmrun gpicview gnome-characters
     obsession lxpanel engrampa thunar thunar-archive-plugin meld mintstick
-    alacritty xfce4-clipman oxygencursors lxappearance papirus-icon-theme
+    xfce4-clipman oxygencursors lxappearance papirus-icon-theme
     espeak mbrola mbrola-en1 redshift-gtk audacious libreoffice
     libreoffice-gtk3 murrine-themes lxappearance-obconf neverputt gparted
     ffmpeg scrot filezilla starship vym yelp zenity planner
-    xfce4-screenshooter gimp keepassxc bleachbit gifsicle synaptic geany
-    geany-plugins ffmpegthumbnailer claws-mail bogofilter
-    claws-mail-bogofilter lynx claws-mail-fancy-plugin claws-mail-pgpmime
-    claws-mail-tools claws-mail-pgpinline claws-mail-vcalendar-plugin
-    firefox sublime-text
+    xfce4-screenshooter gimp bleachbit gifsicle synaptic geany
+    geany-plugins ffmpegthumbnailer
 )
 
 log "Installing ${#PACKAGES[@]} packages..."

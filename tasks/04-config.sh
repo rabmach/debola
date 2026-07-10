@@ -96,9 +96,9 @@ if [[ -d "$DEBOLA_DIR/home" ]]; then
 fi
 
 # ── films.txt ─────────────────────────────────────────────────
-if [[ -f "$DEBOLA_DIR/films.txt" ]]; then
+if [[ -f "$DEBOLA_DIR/home/films.txt" ]]; then
     log "Restoring films.txt..."
-    backup_and_copy "$DEBOLA_DIR/films.txt" "$CURRENT_HOME/films.txt"
+    backup_and_copy "$DEBOLA_DIR/home/films.txt" "$CURRENT_HOME/films.txt"
 fi
 
 # ── Pictures/ ─────────────────────────────────────────────────
