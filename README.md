@@ -9,6 +9,8 @@ This installs a lightweight, fully functional and completely opinionated desktop
 This setup is great for older machines (say, an HP EliteBook 8440p) or low-spec models and is smokin' on newer hardware (a Lenovo p53s, maybe). It has been reliable and functional for (me, others) for a long time. It's out of the way, light, fast, boring - no whiz-bang at all other than handy; no ricing, or, whatever.
 I am not even sure what that is. It's pretty, though, and X11. Also uses the fastcompmgr compositor.
 
+UPDATE: 10 jul 26, the script is now more interactive and will ask you about installing a few different packages, like: firefox, sublime-text, etc. Also, it no longer defaults to an external monitor, but, will ask you to or not, and will ask you about installing printing support.
+
 
 # Basic Applications, whatnot
 
