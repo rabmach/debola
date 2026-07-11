@@ -37,11 +37,19 @@ fi
 log "  Setting x-file-manager → thunar..."
 sudo update-alternatives --install /usr/bin/x-file-manager x-file-manager /usr/bin/thunar 230 2>&1 | tee -a "$LOG_FILE"
 
-log "  Setting x-terminal-emulator → alacritty..."
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/alacritty 210 2>&1 | tee -a "$LOG_FILE"
+if [[ -x /usr/bin/alacritty ]]; then
+    log "  Setting x-terminal-emulator → alacritty..."
+    sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/alacritty 210 2>&1 | tee -a "$LOG_FILE"
+else
+    warn "  alacritty not found, skipping x-terminal-emulator alternative."
+fi
 
-log "  Setting x-text-editor → subl..."
-sudo update-alternatives --install /usr/bin/x-text-editor x-text-editor /usr/bin/subl 210 2>&1 | tee -a "$LOG_FILE"
+if [[ -x /usr/bin/subl ]]; then
+    log "  Setting x-text-editor → subl..."
+    sudo update-alternatives --install /usr/bin/x-text-editor x-text-editor /usr/bin/subl 210 2>&1 | tee -a "$LOG_FILE"
+else
+    warn "  subl not found, skipping x-text-editor alternative."
+fi
 
 # ── Remove xdg-desktop-portal ─────────────────────────────────
 log "  Removing xdg-desktop-portal packages..."

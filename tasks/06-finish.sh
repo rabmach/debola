@@ -69,6 +69,22 @@ else
     log "No optional packages selected."
 fi
 
+# ── Set alternatives for newly installed packages ───────────
+if [[ -x /usr/bin/alacritty ]]; then
+    log "  Setting x-terminal-emulator → alacritty..."
+    sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/alacritty 210 2>&1 | tee -a "$LOG_FILE"
+fi
+
+if [[ -x /usr/bin/subl ]]; then
+    log "  Setting x-text-editor → subl..."
+    sudo update-alternatives --install /usr/bin/x-text-editor x-text-editor /usr/bin/subl 210 2>&1 | tee -a "$LOG_FILE"
+fi
+
+if [[ -x /usr/bin/kitty ]]; then
+    log "  Setting x-terminal-emulator → kitty..."
+    sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/kitty 200 2>&1 | tee -a "$LOG_FILE"
+fi
+
 header "EXTERNAL MONITOR SETUP"
 
 AUTOSTART_FILE="$CURRENT_HOME/.config/openbox/autostart"
