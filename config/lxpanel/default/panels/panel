@@ -59,12 +59,12 @@ Plugin {
     interval=30
     enabled=1
     provider=openweathermap
-    alias="01571"
-    city="01571"
-    state=Massachusetts
-    country=United States
-    latitude=42.044302
-    longitude=-71.905882
+    alias=""
+    city=""
+    state=
+    country=
+    latitude=
+    longitude=-
   }
 }
 Plugin {
