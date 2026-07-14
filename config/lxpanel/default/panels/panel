@@ -64,7 +64,7 @@ Plugin {
     state=
     country=
     latitude=
-    longitude=-
+    longitude=
   }
 }
 Plugin {
