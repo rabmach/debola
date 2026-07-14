@@ -75,11 +75,11 @@ cd into debola:
 
 There you go; a new Debian and Openbox setup and it's the easiest 13 minutes you will spend today with the biggest return, by miles. Have fun.
 
-| Heads Up :index_pointing_at_the_viewer:| :point_down: Post Install|
+| Heads Up :index_pointing_at_the_viewer:| Post Install :point_down:|
 |:--------|:--------|
 | Defaults to an external monitor, prompted | edit **~/.config/pianobar/config** to add your creds and check line 11 |
-| boots to a tty, so, startx | edit **~/.config/weather_sh.rc** add your_api and your_city_code |
-| install **network-manager** if you need wifi | edit **~/bin/weather.sh** look at lines 5 and 6 |
+| install **network-manager** if you need wifi | edit **~/.config/weather_sh.rc** add your_api and your_city_code |
+| desktop with startx, or 👇 | edit **~/bin/weather.sh** look at lines 5 and 6 |
 | uncomment last line in restored ~/.profile | config the **lxpanel** weather widget |
 | Prompted to include printing support | <kbd>Win</kbd>+<kbd>w</kbd>LO Writer, <kbd>Win</kbd>+<kbd>insert</kbd> captures screen |
 
