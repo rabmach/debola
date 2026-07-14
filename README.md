@@ -6,8 +6,14 @@ This installs a lightweight, fully functional and completely opinionated desktop
 
 ![Openbox desktop on Debian](https://madcarters.com/images/alanordic.jpg)
 
-This setup is great for older machines (say, an HP EliteBook 8440p) or low-spec models and is smokin' on newer hardware (a Lenovo p53s, maybe). It has been reliable and functional for (me, others) for a long time. It's out of the way, light, fast, boring - no whiz-bang at all other than handy; no ricing, or, whatever.
+This setup is great for old(er) machines (say, an HP EliteBook 8440p) or low-spec models and is smokin' on newer hardware (a Lenovo p53s, maybe, which is getting a little old). It has been reliable and functional for (me, others) for a long time. It's out of the way, light, fast, boring, sane - no whiz-bang at all other than handy; no ricing, or, whatever.
 I am not even sure what that is. It's pretty, though, and X11. Also uses the fastcompmgr compositor.
+
+## Boring and Reliable
+So boring. It's just there all the time working and doing. All the time. It's like in a relationship where you never argue, at all, not even a little. That's weird, right? Debian, man, it's always right there saying, "Yes, of course!" to your chaos. 
+
+And Openbox. Sit DOWN, son. It's already your favorite, you just don't know it, yet. Clone the repo, ./restore.sh, use it a day. Try to be cool.
+
 
 # Basic Applications, whatnot
 
