@@ -1,4 +1,4 @@
-[ -d ~/.screenlayout ] && "$(ls ~/.screenlayout/*.sh | head -1)"
+#[ -d ~/.screenlayout ] && "$(ls ~/.screenlayout/*.sh | head -1)"
 waldesk &
 (sleep 1s && ~/bin/fastcompmgr -o 0.4 -r 12 -c -C) &
 (sleep 4s && ~/bin/frank) &
