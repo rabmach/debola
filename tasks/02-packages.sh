@@ -24,7 +24,7 @@ PACKAGES=(
     sensible-utils iotop inxi psmisc s-tui sed dfc curl feh bat lsd nvtop
     unclutter numlockx wget whois bc jq tango-icon-theme obsidian-icon-theme
     arc-theme openbox pianobar orage gmrun gpicview gnome-characters
-    obsession lxpanel engrampa thunar thunar-archive-plugin meld mintstick
+    obsession gnome-keyring lxpanel engrampa thunar thunar-archive-plugin meld mintstick
     xfce4-clipman oxygencursors lxappearance papirus-icon-theme
     espeak mbrola mbrola-en1 redshift-gtk audacious libreoffice
     libreoffice-gtk3 murrine-themes lxappearance-obconf neverputt gparted
