@@ -32,11 +32,11 @@ theWeek = dt.strftime('%U')
 
 print ('<?xml version=\"1.0\" encoding=\"UTF-8\"?>')
 print ('<openbox_pipe_menu>')
-print ('<separator />')
+
 print ('<item label="😃 by duration, as is time" />')
-print ('<separator />')
+
 print ('<item label="🫠 '+theTime+'"/>')
-print ('<item label="'+theDate+'"/>')
+print ('<item label="'🗿 +theDate+'"/>')
 print ('<item label="🕺🏻 '+'Day '+theDay+'"/>')
 print ('<item label="🎸 '+'Week '+theWeek+'"/>')
 print ('</openbox_pipe_menu>')
