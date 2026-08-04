@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-### this here starts the work - quick and handy DORiS for the debola - machiner 2026
+### this here starts the work - quick and handy DORiS for the debola - machiner opencode 2026
 ### have at it
 # restore.sh - Debian Openbox Restoration Script
 #

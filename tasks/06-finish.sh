@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-### part of the DORiS suite of goodness - debian openbox restoration script(s) - 2026 machiner
+### part of the DORiS suite of goodness - debian openbox restoration script(s) - 2026 machiner opencode
 # 06-finish.sh - Optional packages, monitor setup, and completion
 #
 
