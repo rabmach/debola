@@ -18,11 +18,6 @@ function box() { t="$1xxxx";c=${2:-#}; echo ${t//?/$c}; echo "$c $1 $c"; echo ${
                   #------------------------------------------////
                   # Handy Utility:
                   #------------------------------------------////
-
-
-
-
-
 function pwmk()
 {
 select passwordchoice in "Memorable Passwords" "Large Password Sheet"
@@ -858,19 +853,19 @@ whassup() {
     (-c)
       ps -eo pcpu,vsz,user | 
         tail -n +2 | 
-        awk '{ cpu[$3]+=$1; vsz[$3]+=$2 } END { for (user in cpu) printf("%-10s - Memory: %10.1f KiB, CPU: %4.1f%\n", user, vsz[user]/1024, cpu[user]); }' | 
+        awk '{ cpu[$3]+=$1; vsz[$3]+=$2 } END { for (user in cpu) printf("%-10s - Memory: %10.1f KiB, CPU: %4.1f%%\n", user, vsz[user]/1024, cpu[user]); }' | 
         sort -k7 -rn
     ;;
     (-m)
       ps -eo pcpu,vsz,user | 
         tail -n +2 | 
-        awk '{ cpu[$3]+=$1; vsz[$3]+=$2 } END { for (user in cpu) printf("%-10s - Memory: %10.1f KiB, CPU: %4.1f%\n", user, vsz[user]/1024, cpu[user]); }' | 
+        awk '{ cpu[$3]+=$1; vsz[$3]+=$2 } END { for (user in cpu) printf("%-10s - Memory: %10.1f KiB, CPU: %4.1f%%\n", user, vsz[user]/1024, cpu[user]); }' | 
         sort -k4 -rn
     ;;
     ('')
       ps -eo pcpu,vsz,user |
         tail -n +2 | 
-        awk '{ cpu[$3]+=$1; vsz[$3]+=$2 } END { for (user in cpu) printf("%-10s - Memory: %10.1f KiB, CPU: %4.1f%\n", user, vsz[user]/1024, cpu[user]); }'
+        awk '{ cpu[$3]+=$1; vsz[$3]+=$2 } END { for (user in cpu) printf("%-10s - Memory: %10.1f KiB, CPU: %4.1f%%\n", user, vsz[user]/1024, cpu[user]); }'
     ;;
   esac
 }

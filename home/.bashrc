@@ -1,15 +1,12 @@
 ##bashrc, debian, machiner, others
-
 #ssh-agent.service
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
-
 case $- in
     *i*) ;;
       *) return;;
 esac
 if [[ $iatest > 0 ]]; then bind "set bell-style visible"; fi
 export XDG_SESSION_TYPE=X11
-export TZ="America/New_York"
 export BROWSER='firefox'
 export VISUAL=nano
 export XDG_CURRENT_DESKTOP="openbox"

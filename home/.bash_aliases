@@ -1,11 +1,12 @@
-##aliases, debian, machiner
+##aliases, debian, machiner, folks
 #------------------------------------------////
-# System:
+# System
 #------------------------------------------////
 alias rslv='sudo nano /etc/resolv.conf'
 #alias ports='sudo nmap -F 192.168.1.0/24'
 alias ports='netstat -tulanp'
 alias ping='ping -c 4'
+alias clients='sudo nmap -sn 192.168.1.0/24'
 alias router='x-www-browser https://192.168.1.1 &'
 alias myip='lynx -dump -hiddenlinks=ignore -nolist http://checkip.dyndns.org:8245/ | sed "/^$/d; s/^[ ]*//g; s/[ ]*$//g"'
 alias code='~/.local/share/opencode/bin/rg'
@@ -23,6 +24,8 @@ alias cleancache='sudo /sbin/sysctl vm.drop_caches=3'
 alias psmem='ps auxf | sort -nr -k 4'
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 alias mount='mount |column -t'
+alias max='echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
+alias checkmax='sudo cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias rm='rm -I --preserve-root'
 alias mv='mv -i'
 alias cp='cp -i'
@@ -51,7 +54,7 @@ alias servicekill='sudo systemctl kill'
 alias servicerestart='sudo systemctl restart'
 alias servicereload='sudo systemctl reload'
 #------------------------------------------////
-# Package Management:
+# Packages
 #------------------------------------------////
 alias sources='sudo x-text-editor /etc/apt/sources.list'
 alias deb='sudo dpkg -i'
@@ -69,16 +72,13 @@ alias devs="aptitude -F '%p' search '~i -dev$'"
 alias devsizes="aptitude -F '%I %p' search '~i -dev$'"
 alias otto='sudo apt autoremove'
 #------------------------------------------////
-# Desktop:
+# Desktop
 #------------------------------------------////
-
 alias tasks='task next'
 alias sizes='duc ui .'
 alias taska='task add'
 alias nuke='/bin/rm  --recursive --force --verbose'
 alias cpuwatch="watch -d -n 1 'ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'"
-alias max='echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
-alias checkmax='sudo cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias b='buku --suggest'
 alias stopwatch='date && echo "Press CTRL+D to stop" && time read'
 alias again='systemctl reboot'
@@ -91,20 +91,11 @@ alias rc='x-text-editor ~/.config/openbox/rc.xml &'
 alias aliases='x-text-editor ~/.bash_aliases'
 alias recdesk='ffmpeg -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw:0 output.mkv'
 alias pick='shuf -n 1 films.txt'
-alias whoami='espeak -v mb-en1 "Bitch, I am Dracula"'
+alias dood='espeak -v mb-en1 "Bitch, I am Dracula"'
 alias say='espeak -v mb-en1 -s170'
 alias saygreet='echo "$(HOUR=$(date +%H); echo "$( [ "$HOUR" -lt 12 ] && echo "Good morning" || { [ "$HOUR" -lt 17 ] && echo "Good afternoon" || { [ "$HOUR" -lt 21 ] && echo "Good evening" || echo "Good night"; }; }) $(getent passwd "${USER}" | cut -d ":" -f 5 | cut -d "," -f 1 || echo "${USER}")! It is $(date +"%-I. %M. %p" | sed "s/AM/A. M./; s/PM/P. M./"). $(grep -q "^To " /var/mail/${USER} 2>/dev/null && echo "You have new messages." || echo "")")" | espeak -v mb-en1 -s170'
 alias home='cl ~'
 alias fetcher='fastfetch'
-alias excuses='echo `telnet bofh.jeffballard.us 666 2>/dev/null` |grep --color -o "Your excuse is:.*$"'
-alias funfacts='wget http://www.randomfunfacts.com -O - 2>/dev/null | grep \<strong\> | sed "s;^.*<i>\(.*\)</i>.*$;\1;";'
-alias insults='wget http://www.randominsults.net -O - 2>/dev/null | grep \<strong\> | sed "s;^.*<i>\(.*\)</i>.*$;\1;";'
-alias lotto='shuf -i 1-49 -n 6 | sort -n | xargs'
-alias matrix='echo -e "\e[32m"; while :; do for i in {1..16}; do r="$(($RANDOM % 2))"; if [[ $(($RANDOM % 5)) == 1 ]]; then if [[ $(($RANDOM % 4)) == 1 ]]; then v+="\e[1m $r   "; else v+="\e[2m $r   "; fi; else v+="     "; fi; done; echo -e "$v"; v=""; done'
-alias matrix2='echo -ne "\e[32m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
-alias matrix3='tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=lcase,unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
-alias busy='my_file=$(find /usr/include -type f | sort -R | head -n 1); my_len=$(wc -l $my_file | awk "{print $1}"); let "r = $RANDOM % $my_len" 2>/dev/null; nano +$r $my_file'
-alias sing='x="bottles of beer";y="on the wall";for b in {99..1};do echo "$b $x $y, $b $x. Take one down pass it around, $(($b-1)) $x $y"; sleep 8;done'
 alias weather='~/bin/weather.sh && ~/bin/forecast.sh'
 alias burn='sudo mintstick -m iso'
 alias map='telnet mapscii.me'
@@ -117,7 +108,6 @@ alias rec='sox -t alsa default "$(date +"%Y-%m-%d-%I-%M-%S")-output.flac"'
 alias word='/usr/bin/lowriter &'
 alias tunes='mpv --shuffle --playlist=tunage20jan25.m3u &'
 alias killtunes='killall -9 mpv'
-alias clients='sudo nmap -sn 192.168.1.0/24'
 alias timer='~/bin/timer1.sh'
 alias bp="sudo chattr +i ${HOME}/.bashrc"
 alias bup="sudo chattr -i ${HOME}/.bashrc"
@@ -134,15 +124,27 @@ alias sep='cal -m 09'
 alias oct='cal -m 10'
 alias nov='cal -m 11'
 alias dec='cal -m 12'
-alias icat='~/Downloads/kitty-0.45.0-x86_64/bin/kitten icat'
-alias nbp='~/bin/mkpwd.sh 32 1 >> new-bigass-passwords.txt && cat new-bigass-passwords.txt'
+#alias icat='~/Downloads/kitty-0.45.0-x86_64/bin/kitten icat'
 #------------------------------------------////
-# Lookin' at Stuff:
+# Ridiculous
+#------------------------------------------////
+alias excuses='echo `telnet bofh.jeffballard.us 666 2>/dev/null` |grep --color -o "Your excuse is:.*$"'
+alias funfacts='wget http://www.randomfunfacts.com -O - 2>/dev/null | grep \<strong\> | sed "s;^.*<i>\(.*\)</i>.*$;\1;";'
+alias insults='wget http://www.randominsults.net -O - 2>/dev/null | grep \<strong\> | sed "s;^.*<i>\(.*\)</i>.*$;\1;";'
+alias lotto='shuf -i 1-49 -n 6 | sort -n | xargs'
+alias matrix='echo -e "\e[32m"; while :; do for i in {1..16}; do r="$(($RANDOM % 2))"; if [[ $(($RANDOM % 5)) == 1 ]]; then if [[ $(($RANDOM % 4)) == 1 ]]; then v+="\e[1m $r   "; else v+="\e[2m $r   "; fi; else v+="     "; fi; done; echo -e "$v"; v=""; done'
+alias matrix2='echo -ne "\e[32m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
+alias matrix3='tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=lcase,unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
+alias busy='my_file=$(find /usr/include -type f | sort -R | head -n 1); my_len=$(wc -l $my_file | awk "{print $1}"); let "r = $RANDOM % $my_len" 2>/dev/null; nano +$r $my_file'
+alias sing='x="bottles of beer";y="on the wall";for b in {99..1};do echo "$b $x $y, $b $x. Take one down pass it around, $(($b-1)) $x $y"; sleep 8;done'
+#------------------------------------------////
+# Lookin' at Stuff
 #-------------------------------
 alias dir='dir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias dmesg='dmesg --color'
 alias parts='sudo gparted'
 #alias du='du -kh'
 alias df='df --human-readable --print-type --exclude-type=squashfs --exclude-type=tmpfs --exclude-type=devtmpfs --exclude-type=efivarfs'
@@ -165,7 +167,5 @@ alias ll='ls -Fls' # long listing format
 alias labc='ls -lap' #alphabetical sort
 alias lf="ls -l | egrep -v '^d'"
 alias ldir="ls -l | egrep '^d'"
-alias grep='grep --color=auto'
-alias dmesg='dmesg --color'
 alias du='du -h --max-depth=1 . | sort -h'
 alias cards='lspci -k | grep -A 2 -E "(VGA|3D)"'
