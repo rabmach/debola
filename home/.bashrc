@@ -6,6 +6,7 @@ case $- in
       *) return;;
 esac
 if [[ $iatest > 0 ]]; then bind "set bell-style visible"; fi
+export TZ="$(cat /etc/timezone 2>/dev/null || readlink -f /etc/localtime 2>/dev/null | sed 's|.*zoneinfo/||' || echo UTC)"
 export XDG_SESSION_TYPE=X11
 export BROWSER='firefox'
 export VISUAL=nano
